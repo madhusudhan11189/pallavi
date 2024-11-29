@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Place Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('goldent.html') no-repeat center center fixed; 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .booking-container {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+        .booking-container h1 {
+            text-align: center;
+            color: #1e88e5;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        input:focus, select:focus {
+            border-color: #1e88e5;
+            outline: none;
+            box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+        }
+        button {
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+        @media (max-width: 500px) {
+            .booking-container {
+                padding: 15px 20px;
+            }
+
+            .booking-container h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <h1><i>Book a Visit to a Tourist Place</i></h1>
+        <form action="confirm.html">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required aria-label="Full Name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-label="Email" placeholder="Enter your email">
+
+            <label for="date">Preferred Visit Date:</label>
+            <input type="date" id="date" name="date" required aria-label="Visit Date">
+
+            <label for="place">Select Tourist Place:</label>
+            <select id="place" name="place" required aria-label="Tourist Place">
+                <option value="" disabled selected>Select a place</option>
+                <option value="Great Wall of China">Great Wall of China</option>
+                <option value="Eiffel Tower">Eiffel Tower</option>
+                <option value="Machu Picchu">Machu Picchu</option>
+                <option value="Colosseum">Colosseum</option>
+                <option value="Taj Mahal">Taj Mahal</option>
+                <option value="Charminar">Charminar</option>
+                <option value="Ooty">Ooty</option>
+                <option value="Goa">Goa</option>
+                <option value="Vizag">Vizag</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
